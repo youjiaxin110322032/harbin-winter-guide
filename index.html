@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#142b2b">
+	<meta name="description" content="哈爾濱、長春冬季旅行禦寒穿搭與 26 吋行李箱打包清單。">
+	<title>北境冬行｜哈爾濱・長春禦寒指南</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+TC:wght@400;500;600;700;800&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+	<style>
+		:root {
+			--ink: #172827;
+			--muted: #687977;
+			--paper: #f5f7f4;
+			--white: #fff;
+			--ice: #e6efeb;
+			--line: #dce5e0;
+			--pine: #244744;
+			--pine-deep: #142b2b;
+			--coral: #e2765b;
+			--gold: #eabf74;
+			--serif: "Playfair Display", "Noto Sans TC", serif;
+			--sans: "DM Sans", "Noto Sans TC", sans-serif;
+		}
+		* { box-sizing: border-box; }
+		html { scroll-behavior: smooth; scroll-padding-top: 82px; }
+		body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); font-size: 15px; line-height: 1.75; }
+		a { color: inherit; text-decoration: none; }
+		button, input { font: inherit; }
+		button { color: inherit; }
+		.topbar { position: sticky; z-index: 10; top: 0; height: 68px; background: rgba(20,43,43,.96); color: white; border-bottom: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(14px); }
+		.nav { max-width: 1200px; height: 100%; margin: auto; padding: 0 28px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+		.brand { display: flex; align-items: center; gap: 11px; font-size: 13px; font-weight: 700; letter-spacing: .04em; white-space: nowrap; }
+		.brand-mark { display: grid; width: 31px; height: 31px; place-items: center; border: 1px solid rgba(255,255,255,.48); border-radius: 50%; color: var(--gold); font-family: var(--serif); font-size: 17px; }
+		.nav-links { display: flex; align-items: center; gap: 30px; color: #d1dbd6; font-size: 12px; }
+		.nav-links a:hover { color: var(--gold); }
+		.nav-action { padding: 8px 14px; border: 1px solid rgba(255,255,255,.46); border-radius: 2px; font-size: 11px; white-space: nowrap; }
+		.menu-toggle { display: none; width: 40px; height: 40px; border: 1px solid rgba(255,255,255,.35); border-radius: 2px; background: transparent; color: white; font-size: 20px; cursor: pointer; }
+		.hero { position: relative; min-height: 640px; display: flex; align-items: center; overflow: hidden; color: white; background: #293d3b; }
+		.hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgba(11,28,28,.76) 0%, rgba(11,28,28,.45) 48%, rgba(11,28,28,.05) 100%), linear-gradient(0deg, rgba(11,28,28,.35), transparent 38%), url("https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=2200&q=88") center 52% / cover; transform: scale(1.01); }
+		.hero-inner { position: relative; width: min(1200px, 100%); margin: auto; padding: 86px 28px 82px; animation: rise .7s ease-out both; }
+		.eyebrow { display: flex; align-items: center; gap: 11px; margin: 0 0 22px; color: var(--gold); font-size: 11px; font-weight: 700; letter-spacing: .16em; }
+		.eyebrow::before { width: 27px; height: 1px; content: ""; background: currentColor; }
+		h1 { max-width: 710px; margin: 0; font-family: var(--serif); font-size: clamp(52px, 7.3vw, 92px); font-weight: 500; line-height: 1.07; letter-spacing: 0; }
+		h1 span { display: block; margin-top: 12px; font-family: var(--sans); font-size: clamp(20px, 2.7vw, 32px); font-weight: 500; line-height: 1.45; }
+		.hero-copy { max-width: 470px; margin: 24px 0 0; color: #e1e9e5; font-size: 14px; }
+		.hero-cta { display: inline-flex; align-items: center; gap: 12px; margin-top: 30px; padding: 12px 17px; background: var(--coral); color: #fff; font-size: 12px; font-weight: 700; transition: background .2s, transform .2s; }
+		.hero-cta:hover { background: #cc634b; transform: translateY(-2px); }
+		.hero-cta b { font-size: 18px; font-weight: 400; }
+		.hero-caption { position: absolute; right: max(28px, calc((100vw - 1200px) / 2 + 28px)); bottom: 24px; color: rgba(255,255,255,.77); font-size: 10px; letter-spacing: .05em; }
+		.intro-strip { display: grid; grid-template-columns: 1fr 1fr 1fr; max-width: 1200px; margin: -1px auto 0; padding: 0 28px; background: var(--pine-deep); color: white; }
+		.intro-stat { display: flex; align-items: center; gap: 15px; min-height: 90px; padding: 18px 23px; border-right: 1px solid rgba(255,255,255,.13); }
+		.intro-stat:first-child { padding-left: 0; }
+		.intro-stat:last-child { border: 0; }
+		.stat-number { color: var(--gold); font-family: var(--serif); font-size: 27px; line-height: 1; }
+		.stat-label { color: #ced9d3; font-size: 11px; line-height: 1.5; }
+		.section { max-width: 1200px; margin: 0 auto; padding: 100px 28px; }
+		.section-head { display: flex; align-items: end; justify-content: space-between; gap: 25px; margin-bottom: 40px; }
+		.section-kicker { margin: 0 0 10px; color: var(--coral); font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+		h2 { margin: 0; font-family: var(--serif); font-size: clamp(35px, 4.2vw, 52px); font-weight: 500; line-height: 1.2; }
+		.section-desc { max-width: 370px; margin: 0; color: var(--muted); font-size: 13px; }
+		.layers { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+		.layer { position: relative; min-height: 250px; padding: 29px 29px 28px 0; }
+		.layer + .layer { padding-left: 29px; border-left: 1px solid var(--line); }
+		.layer-no { color: #9aa9a3; font-family: var(--serif); font-size: 13px; }
+		.layer-symbol { float: right; display: grid; width: 40px; height: 40px; place-items: center; border-radius: 50%; background: var(--ice); color: var(--pine); font-size: 18px; }
+		.layer h3 { margin: 26px 0 9px; font-size: 18px; }
+		.layer p { margin: 0; color: var(--muted); font-size: 12px; }
+		.layer strong { color: var(--pine); }
+		.layer-note { display: inline-block; margin-top: 14px; padding: 4px 8px; background: #e8efea; color: var(--pine); font-size: 10px; }
+		.wear-note { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-top: 24px; padding: 18px 22px; background: var(--pine); color: white; }
+		.wear-note p { margin: 0; font-size: 12px; }
+		.wear-note strong { color: var(--gold); }
+		.wear-note span { flex: 0 0 auto; color: #d7e3de; font-size: 10px; }
+		.packing-section { max-width: none; background: #eaf0ec; }
+		.packing-inner { max-width: 1200px; margin: auto; padding: 100px 28px; }
+		.packing-layout { display: grid; grid-template-columns: minmax(0, 1fr) 280px; gap: 70px; align-items: start; }
+		.packing-title { margin-bottom: 35px; }
+		.progress-wrap { margin: 24px 0 0; }
+		.progress-label { display: flex; justify-content: space-between; gap: 16px; margin-bottom: 9px; color: var(--muted); font-size: 11px; }
+		.progress-track { height: 5px; overflow: hidden; background: #d4dfd9; }
+		.progress-fill { width: 0; height: 100%; background: var(--coral); transition: width .25s ease; }
+		.checklist-tools { display: flex; gap: 8px; margin-bottom: 15px; }
+		.tool-button { padding: 7px 11px; border: 1px solid #c8d4ce; border-radius: 2px; background: transparent; color: var(--pine); font-size: 10px; cursor: pointer; }
+		.tool-button:hover { background: white; }
+		.check-group { margin-top: 13px; border-top: 1px solid #cbd8d1; }
+		.group-heading { display: flex; justify-content: space-between; gap: 15px; padding: 18px 0 9px; }
+		.group-heading h3 { margin: 0; font-size: 14px; }
+		.group-count { color: #7d8e87; font-size: 10px; white-space: nowrap; }
+		.check-row { display: flex; align-items: flex-start; gap: 11px; padding: 8px 0; color: #465753; font-size: 12px; cursor: pointer; }
+		.check-row input { flex: 0 0 auto; width: 16px; height: 16px; margin: 2px 0 0; accent-color: var(--pine); cursor: pointer; }
+		.check-row:has(input:checked) span { color: #82918c; text-decoration: line-through; text-decoration-color: #9cab9f; }
+		.check-aside { position: sticky; top: 95px; padding: 23px 23px 26px; background: var(--pine-deep); color: white; }
+		.aside-label { margin: 0 0 8px; color: var(--gold); font-size: 10px; font-weight: 700; letter-spacing: .13em; }
+		.check-aside h3 { margin: 0 0 19px; font-family: var(--serif); font-size: 26px; font-weight: 500; line-height: 1.3; }
+		.check-aside p { margin: 0; color: #c8d5cf; font-size: 11px; }
+		.aside-divider { height: 1px; margin: 21px 0; background: rgba(255,255,255,.17); }
+		.aside-tip { display: flex; gap: 10px; margin-top: 13px; color: #dbe5df; font-size: 10px; line-height: 1.6; }
+		.aside-tip b { color: var(--coral); font-size: 14px; }
+		.packing-footnote { margin-top: 20px; color: #6b7c75; font-size: 10px; }
+		.essentials-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+		.essential { min-height: 215px; padding: 25px 25px 25px 0; }
+		.essential + .essential { padding-left: 25px; border-left: 1px solid var(--line); }
+		.essential-icon { color: var(--coral); font-size: 19px; }
+		.essential h3 { margin: 12px 0 8px; font-size: 15px; }
+		.essential ul { margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: 11px; }
+		.essential li { padding: 2px 0; }
+		.essential li::before { margin-right: 8px; color: var(--pine); content: "+"; }
+		.documents { display: grid; grid-template-columns: .78fr 1.22fr; margin-top: 35px; background: var(--ice); }
+		.documents-title { padding: 29px 31px; background: var(--pine); color: white; }
+		.documents-title p { margin: 0 0 7px; color: var(--gold); font-size: 10px; letter-spacing: .12em; }
+		.documents-title h3 { margin: 0; font-family: var(--serif); font-size: 27px; font-weight: 500; }
+		.documents-list { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 20px; align-content: center; padding: 25px 30px; color: #52645d; font-size: 11px; }
+		.documents-list span::before { margin-right: 8px; color: var(--coral); content: "✓"; }
+		.souvenir { display: grid; grid-template-columns: 1.1fr .9fr; gap: 70px; align-items: center; padding: 70px 0 25px; }
+		.souvenir h2 { max-width: 460px; }
+		.souvenir-copy { margin: 17px 0 0; color: var(--muted); font-size: 12px; }
+		.capacity { margin-top: 24px; }
+		.capacity-bar { display: flex; height: 12px; gap: 3px; }
+		.capacity-bar i { flex: 1; background: var(--pine); }
+		.capacity-bar i:nth-child(n+8) { background: #d7e1da; }
+		.capacity-labels { display: flex; justify-content: space-between; margin-top: 6px; color: var(--muted); font-size: 10px; }
+		.souvenir-list { display: grid; gap: 0; border-top: 1px solid var(--line); }
+		.souvenir-line { display: flex; justify-content: space-between; gap: 15px; padding: 12px 0; border-bottom: 1px solid var(--line); font-size: 11px; }
+		.souvenir-line span:last-child { color: var(--muted); text-align: right; }
+		.souvenir-line.avoid span:first-child { color: #bd5749; }
+		.closing { position: relative; overflow: hidden; background: var(--pine-deep); color: white; }
+		.closing::after { position: absolute; top: -110px; right: 5%; color: rgba(255,255,255,.04); content: "北"; font-family: var(--serif); font-size: 340px; line-height: 1; pointer-events: none; }
+		.closing-inner { position: relative; z-index: 1; max-width: 1200px; margin: auto; padding: 72px 28px 76px; }
+		.closing .section-kicker { color: var(--gold); }
+		.closing h2 { max-width: 700px; font-size: clamp(31px, 4vw, 48px); }
+		.closing p { max-width: 560px; margin: 17px 0 0; color: #cfdbd5; font-size: 12px; }
+		.footer { display: flex; justify-content: space-between; gap: 20px; max-width: 1200px; margin: auto; padding: 21px 28px; color: #81918a; font-size: 9px; }
+		@keyframes rise { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+		@media (max-width: 760px) {
+			.topbar { height: 60px; }
+			.nav { padding: 0 19px; }
+			.nav-action { display: none; }
+			.menu-toggle { display: block; }
+			.nav-links { position: absolute; top: 59px; right: 0; left: 0; display: none; padding: 10px 20px 17px; background: var(--pine-deep); }
+			.nav-links.open { display: grid; gap: 0; }
+			.nav-links a { padding: 10px 0; border-top: 1px solid rgba(255,255,255,.1); }
+			.hero { min-height: 610px; }
+			.hero::before { background-position: 58% center; background-image: linear-gradient(90deg, rgba(11,28,28,.7), rgba(11,28,28,.28)), linear-gradient(0deg, rgba(11,28,28,.5), transparent 65%), url("https://images.unsplash.com/photo-1418985991508-e47386d96a71?auto=format&fit=crop&w=1300&q=85"); }
+			.hero-inner { padding: 74px 23px 80px; }
+			.hero-caption { right: 21px; bottom: 13px; font-size: 8px; }
+			.intro-strip { padding: 0 19px; }
+			.intro-stat { min-height: 83px; gap: 8px; padding: 12px 10px; }
+			.intro-stat:first-child { padding-left: 0; }
+			.stat-number { font-size: 21px; }
+			.stat-label { font-size: 9px; }
+			.section, .packing-inner { padding: 72px 22px; }
+			.section-head { display: block; margin-bottom: 29px; }
+			.section-desc { margin-top: 15px; }
+			.layers { grid-template-columns: 1fr; }
+			.layer, .layer + .layer { min-height: unset; padding: 21px 0; border-left: 0; }
+			.layer + .layer { border-top: 1px solid var(--line); }
+			.layer h3 { margin-top: 14px; }
+			.wear-note { align-items: flex-start; flex-direction: column; gap: 7px; padding: 16px; }
+			.packing-layout { grid-template-columns: 1fr; gap: 31px; }
+			.check-aside { position: static; }
+			.essentials-grid { grid-template-columns: 1fr; }
+			.essential, .essential + .essential { min-height: auto; padding: 20px 0; border-left: 0; }
+			.essential + .essential { border-top: 1px solid var(--line); }
+			.documents { grid-template-columns: 1fr; }
+			.documents-title { padding: 21px 23px; }
+			.documents-list { padding: 19px 23px; }
+			.souvenir { grid-template-columns: 1fr; gap: 28px; padding-top: 58px; }
+			.closing-inner { padding: 60px 22px; }
+			.footer { padding: 17px 22px; }
+		}
+		@media (max-width: 390px) {
+			.intro-stat { align-items: flex-start; flex-direction: column; justify-content: center; }
+			.documents-list { grid-template-columns: 1fr; }
+		}
+		@media print {
+			.topbar, .hero, .intro-strip, .section:not(.packing-section), .closing, .footer, .packing-title, .checklist-tools, .check-aside { display: none !important; }
+			body, .packing-section { background: white; }
+			.packing-inner { padding: 10px; }
+			.packing-layout { display: block; }
+			.check-row { break-inside: avoid; }
+		}
+	</style>
+</head>
+<body>
+	<header class="topbar">
+		<nav class="nav" aria-label="主要導覽">
+			<a class="brand" href="#top"><span class="brand-mark">北</span><span>北境冬行 <span style="color:#91a49b;font-weight:400">/ FIELD GUIDE</span></span></a>
+			<div class="nav-links" id="navLinks">
+				<a href="#layers">分層穿搭</a>
+				<a href="#packing">行李清單</a>
+				<a href="#essentials">低溫備品</a>
+				<a href="#souvenirs">回程留白</a>
+			</div>
+			<a class="nav-action" href="#packing">開始打包　↓</a>
+			<button class="menu-toggle" type="button" aria-label="開啟導覽選單" aria-expanded="false" aria-controls="navLinks">☰</button>
+		</nav>
+	</header>
+	<main id="top">
+		<section class="hero" aria-label="冬日雪景">
+			<div class="hero-inner">
+				<p class="eyebrow">HARbin · CHANGCHUN · WINTER FIELD NOTES</p>
+				<h1>把冷，穿成<span>一場從容的北境旅行。</span></h1>
+				<p class="hero-copy">哈爾濱 × 長春一週禦寒指南。用對分層、帶對小物，26 吋行李箱也能留出伴手禮的位置。</p>
+				<a class="hero-cta" href="#layers">先掌握穿搭層次 <b>→</b></a>
+			</div>
+			<div class="hero-caption">冬季山林示意影像　/　出發前請依當地預報調整</div>
+		</section>
+		<div class="intro-strip" aria-label="行程重點">
+			<div class="intro-stat"><span class="stat-number">07</span><span class="stat-label">天行程<br>輪替穿搭不重複</span></div>
+			<div class="intro-stat"><span class="stat-number">26″</span><span class="stat-label">行李箱<br>精簡打包留空間</span></div>
+			<div class="intro-stat"><span class="stat-number">3</span><span class="stat-label">層穿衣法<br>室內外都好調整</span></div>
+		</div>
+
+		<section class="section" id="layers">
+			<div class="section-head">
+				<div><p class="section-kicker">01 / DRESS FOR THE NORTH</p><h2>保暖靠層次，不靠堆厚。</h2></div>
+				<p class="section-desc">室內暖氣和戶外低溫落差大，分層穿脫更自在。外套穿上身，把箱內空間留給輪替衣物。</p>
+			</div>
+			<div class="layers">
+				<article class="layer"><span class="layer-no">LAYER 01</span><span class="layer-symbol">◉</span><h3>貼身排汗層</h3><p>發熱衣上、下身貼身穿，保持乾爽比一味穿厚更重要。活動量大時，選擇透氣材質。</p><span class="layer-note">貼身・乾爽・好活動</span></article>
+				<article class="layer"><span class="layer-no">LAYER 02</span><span class="layer-symbol">▤</span><h3>中層保暖層</h3><p>毛衣、刷毛上衣或羽絨背心，依當天溫度增減。進室內可脫，避免悶熱流汗。</p><span class="layer-note">可穿脫・蓄暖空氣</span></article>
+				<article class="layer"><span class="layer-no">LAYER 03</span><span class="layer-symbol">⌁</span><h3>防風外層</h3><p>長版羽絨外套遮住大腿，搭配防風帽、圍巾與手套。雪地穿防滑、防水靴，襪子保持乾燥。</p><span class="layer-note">防風・防水・遮住腿部</span></article>
+			</div>
+			<div class="wear-note"><p><strong>出發當天穿上：</strong>長版羽絨外套、發熱衣褲、中層毛衣、厚褲、厚襪、防滑雪靴、毛帽與圍巾。</p><span>把最厚、最佔空間的穿在身上</span></div>
+		</section>
+
+		<section class="packing-section" id="packing">
+			<div class="packing-inner">
+				<div class="packing-layout">
+					<div>
+						<div class="packing-title">
+							<p class="section-kicker">02 / THE 26-INCH CHECKLIST</p>
+							<h2>一週打包，逐項勾好。</h2>
+							<div class="progress-wrap" aria-live="polite">
+								<div class="progress-label"><span>打包進度</span><span id="progressText">0 / 0 項</span></div>
+								<div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+							</div>
+						</div>
+						<div class="checklist-tools"><button class="tool-button" id="resetChecklist" type="button">重設清單</button><button class="tool-button" id="printChecklist" type="button">列印清單</button></div>
+						<div id="checklist"></div>
+						<p class="packing-footnote">清單進度會保存在這台裝置的瀏覽器中。數量可依洗衣安排與個人需求調整。</p>
+					</div>
+					<aside class="check-aside">
+						<p class="aside-label">PACK SMART</p>
+						<h3>箱內留白，回程才從容。</h3>
+						<p>出發時約裝七成。衣物用壓縮袋分區收納，回程拆洗後能再壓縮。</p>
+						<div class="aside-divider"></div>
+						<div class="aside-tip"><b>01</b><span>貼身層捲起收納，放進壓縮袋。</span></div>
+						<div class="aside-tip"><b>02</b><span>備用鞋裝鞋袋，鞋內塞襪子。</span></div>
+						<div class="aside-tip"><b>03</b><span>證件、藥品、行動電源放隨身包。</span></div>
+					</aside>
+				</div>
+			</div>
+		</section>
+
+		<section class="section" id="essentials">
+			<div class="section-head">
+				<div><p class="section-kicker">03 / SMALL THINGS, BIG DIFFERENCE</p><h2>低溫裡的救援小物。</h2></div>
+				<p class="section-desc">乾冷、戶外停留時間長，加上飲食和作息改變，這些小東西往往比多帶一件毛衣更實用。</p>
+			</div>
+			<div class="essentials-grid">
+				<article class="essential"><span class="essential-icon">✳</span><h3>保養與身體</h3><ul><li>高保濕護唇膏 ×2</li><li>滋潤型護手霜 ×1</li><li>小瓶臉部／身體乳液</li><li>面膜 ×1–2</li></ul></article>
+				<article class="essential"><span class="essential-icon">♨</span><h3>保暖輔助</h3><ul><li>暖暖包 ×8–10</li><li>口罩：防風也保暖</li><li>毛帽、圍巾與手套</li><li>厚襪維持乾爽備換</li></ul></article>
+				<article class="essential"><span class="essential-icon">⌁</span><h3>電子與藥品</h3><ul><li>行動電源 ×1–2、充電線</li><li>相機備用電池（如有）</li><li>感冒、腸胃、止痛藥</li><li>個人常用藥與藥品標示</li></ul></article>
+			</div>
+			<div class="documents">
+				<div class="documents-title"><p>KEEP WITH YOU</p><h3>隨身包，不托運。</h3></div>
+				<div class="documents-list"><span>台胞證與身分證件</span><span>證件影本／手機備份</span><span>研習營資料、筆記本與筆</span><span>手機、錢包、行動電源</span></div>
+			</div>
+		</section>
+
+		<section class="section" id="souvenirs">
+			<div class="souvenir">
+				<div>
+					<p class="section-kicker">04 / ROOM FOR THE WAY BACK</p>
+					<h2>留一點空間，裝進旅途。</h2>
+					<p class="souvenir-copy">出發只裝七成，預留箱子上層、鞋子旁的空隙。挑選扁平、輕巧、不易壓壞的伴手禮最省心。</p>
+					<div class="capacity"><div class="capacity-bar" aria-label="出發時建議裝七成"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="capacity-labels"><span>出發：七成滿</span><span>預留回程空間</span></div></div>
+				</div>
+				<div class="souvenir-list">
+					<div class="souvenir-line"><span>適合帶回</span><span>真空包裝食品、小包糖果巧克力</span></div>
+					<div class="souvenir-line"><span>優先挑選</span><span>扁平盒裝、輕量不易碎</span></div>
+					<div class="souvenir-line avoid"><span>較不建議</span><span>瓶裝液體、厚重硬紙盒</span></div>
+					<div class="souvenir-line avoid"><span>出發前確認</span><span>入境規定與航空行李限制</span></div>
+				</div>
+			</div>
+		</section>
+		<section class="closing">
+			<div class="closing-inner"><p class="section-kicker">ONE LAST THING</p><h2>在東北，不是穿得多，是穿得對。</h2><p>外套穿身上、內層分區收、鞋子不重複。出發前再看一次天氣預報，依戶外活動時間調整保暖層，祝你一路暖和、玩得盡興。</p></div>
+		</section>
+	</main>
+	<footer class="footer"><span>北境冬行　/　哈爾濱・長春冬季旅行筆記</span><span>行前請確認最新天氣、航空行李與入境規定</span></footer>
+	<script>
+		const packingGroups = [
+			{ id: "base", title: "A 區｜貼身保暖層", items: ["發熱衣上衣 ×3", "發熱褲 ×2", "絲襪／發熱內搭褲 ×1（備用層）", "壓縮袋 ×1–2"] },
+			{ id: "mid", title: "B 區｜中層保暖衣物", items: ["刷毛或羊毛毛衣 ×2", "保暖長袖上衣 ×1", "羽絨背心 ×1（選擇性）"] },
+			{ id: "bottom", title: "C 區｜下身褲裝", items: ["刷毛長褲 ×2", "室內褲／睡褲 ×1", "正式場合深色長褲或裙 ×1"] },
+			{ id: "socks", title: "D 區｜貼身衣物與襪子", items: ["厚襪 ×4", "一般襪 ×2", "貼身衣物（依天數與洗衣安排）"] },
+			{ id: "shoes", title: "E 區｜備用鞋", items: ["輕便運動鞋／室內鞋 ×1 雙", "鞋袋（鞋內塞襪子省空間）"] },
+			{ id: "formal", title: "F 區｜正式／交流場合", items: ["好看但不厚重的上衣 ×1", "保暖內搭（搭配正式下身）"] },
+			{ id: "small", title: "G 區｜低溫小物與個人用品", items: ["護唇膏 ×2、護手霜 ×1、乳液", "面膜 ×1–2、暖暖包 ×8–10", "行動電源 ×1–2、充電線", "相機備用電池（如有）", "感冒藥、腸胃藥、止痛藥、個人常用藥", "口罩 ×數個"] },
+			{ id: "carry", title: "H 區｜隨身包（不托運）", items: ["台胞證、證件與手機備份", "研習營資料、筆記本、筆", "手機、錢包、行動電源"] }
+		];
+		const checklist = document.querySelector("#checklist");
+		const storageKey = "northbound-winter-packing-v1";
+		let checkedItems = {};
+		try { checkedItems = JSON.parse(localStorage.getItem(storageKey) || "{}"); } catch { checkedItems = {}; }
+
+		packingGroups.forEach((group) => {
+			const section = document.createElement("section");
+			section.className = "check-group";
+			section.innerHTML = `<div class="group-heading"><h3>${group.title}</h3><span class="group-count" data-count="${group.id}"></span></div>`;
+			group.items.forEach((item, index) => {
+				const id = `${group.id}-${index}`;
+				const label = document.createElement("label");
+				label.className = "check-row";
+				label.innerHTML = `<input type="checkbox" data-item="${id}" ${checkedItems[id] ? "checked" : ""}><span>${item}</span>`;
+				section.append(label);
+			});
+			checklist.append(section);
+		});
+
+		function updateProgress() {
+			const inputs = [...checklist.querySelectorAll("input")];
+			const checked = inputs.filter((input) => input.checked).length;
+			document.querySelector("#progressText").textContent = `${checked} / ${inputs.length} 項`;
+			document.querySelector("#progressFill").style.width = `${inputs.length ? checked / inputs.length * 100 : 0}%`;
+			packingGroups.forEach((group) => {
+				const groupInputs = [...checklist.querySelectorAll(`[data-item^="${group.id}-"]`)];
+				document.querySelector(`[data-count="${group.id}"]`).textContent = `${groupInputs.filter((input) => input.checked).length} / ${groupInputs.length}`;
+			});
+			checkedItems = Object.fromEntries(inputs.filter((input) => input.checked).map((input) => [input.dataset.item, true]));
+			try { localStorage.setItem(storageKey, JSON.stringify(checkedItems)); } catch { /* Storage may be unavailable in private browsing. */ }
+		}
+
+		checklist.addEventListener("change", updateProgress);
+		updateProgress();
+		document.querySelector("#resetChecklist").addEventListener("click", () => {
+			checklist.querySelectorAll("input").forEach((input) => { input.checked = false; });
+			updateProgress();
+		});
+		document.querySelector("#printChecklist").addEventListener("click", () => window.print());
+
+		const menuButton = document.querySelector(".menu-toggle");
+		const navLinks = document.querySelector("#navLinks");
+		menuButton.addEventListener("click", () => {
+			const isOpen = navLinks.classList.toggle("open");
+			menuButton.setAttribute("aria-expanded", String(isOpen));
+			menuButton.setAttribute("aria-label", isOpen ? "關閉導覽選單" : "開啟導覽選單");
+			menuButton.textContent = isOpen ? "×" : "☰";
+		});
+		navLinks.addEventListener("click", (event) => {
+			if (event.target.closest("a")) {
+				navLinks.classList.remove("open");
+				menuButton.setAttribute("aria-expanded", "false");
+				menuButton.setAttribute("aria-label", "開啟導覽選單");
+				menuButton.textContent = "☰";
+			}
+		});
+	</script>
+</body>
+</html>
